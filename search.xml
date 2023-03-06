@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>My New Post</title>
+    <url>/2023/02/23/My-New-Post/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/02/22/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
@@ -19,9 +24,177 @@
 ]]></content>
   </entry>
   <entry>
-    <title>My New Post</title>
-    <url>/2023/02/23/My-New-Post/</url>
-    <content><![CDATA[]]></content>
+    <title>关系、关系模式和关系数据库-Lecture2</title>
+    <url>/2023/02/23/%E5%85%B3%E7%B3%BB%E3%80%81%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93-Lecture2/</url>
+    <content><![CDATA[<p><strong>关系、关系模式和关系数据库</strong></p>
+<p><strong>域(domain)：一组具有相同数据类型的值的集合（单一简单的数据类型（复杂的是几个的组合，其“域”为笛卡尔乘积））。</strong></p>
+<h1 id="笛卡尔积"><a href="#笛卡尔积" class="headerlink" title="笛卡尔积"></a>笛卡尔积</h1><p><strong>笛卡尔积（Cartesian Product）：</strong></p>
+<p>![image-20230306195343236](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306195343236.png)</p>
+<p><strong>元组(Tuple)：</strong>笛卡尔积中每一个元素（$d_1,d_2,…,d_n$）叫作一个n元组（n-tuple）或简称元组</p>
+<p>**分量(Component):**笛卡尔积元素中的每一个值$d_i$叫做一个分量</p>
+<p><strong>基数（Cardinal number）：</strong></p>
+<p>![image-20230306200009759](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306200009759.png)</p>
+<h2 id="笛卡尔积表示方法"><a href="#笛卡尔积表示方法" class="headerlink" title="笛卡尔积表示方法"></a>笛卡尔积表示方法</h2><ol>
+<li>笛卡尔积可表示为一张二维表</li>
+<li>表中的每行对应一个元组，表中的每列对应一个域</li>
+</ol>
+<h1 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h1><p><strong>关系（Relation）:</strong></p>
+<p>![image-20230306200309525](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306200309525.png)</p>
+<p><strong>元组（tuple）：</strong></p>
+<p>关系中的每个元素是关系中的元组，通常用<em>t</em>表示。</p>
+<h2 id="关系的表示"><a href="#关系的表示" class="headerlink" title="关系的表示"></a>关系的表示</h2><p>关系也是一个二维表，表的每行对应一个元组，表的每列对应一个域</p>
+<p><strong>属性（域＋意义）：</strong></p>
+<p>![image-20230306200435674](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306200435674.png)</p>
+<p><strong>码：</strong></p>
+<p>![image-20230306200457414](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306200457414.png)</p>
+<p>候选码第三点不可能有超越的意思是，如果全码也不成立，那么就有两个元素相同，而集合中的元素是不重复的，那么这就不会是一个”关系“</p>
+<h2 id="关系的类别"><a href="#关系的类别" class="headerlink" title="关系的类别"></a>关系的类别</h2><p><strong>基本关系（基本表或者基表）：</strong>实际存在的表，是实际存储数据的逻辑表示</p>
+<p><strong>查询表：</strong>查询结果对应的表</p>
+<p><strong>视图表（可以捂元组或者（和）属性，也可以增加属性）：</strong>由基本表或其他视图表导出的表，是<strong>虚表</strong>，不对应实际存储的数据，用来实现外模式的方法</p>
+<p><strong>基本关系的性质：</strong></p>
+<p>![image-20230306203348836](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306203348836.png)</p>
+<h1 id="关系模式"><a href="#关系模式" class="headerlink" title="关系模式"></a>关系模式</h1><p>关系模式（Relation Schema）是型，关系是值，关系模式是对关系的描述，关系模式包括了元组集合的结构、完整性约束条件。关系模式是静态的、稳定的；关系是关系模式在某一时刻的状态或内容，是动态的，随时间不断变化的。关系模式与关系笼统称为关系，通过上下文加以区别。</p>
+<p>![image-20230306203508426](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306203508426.png)</p>
+<p>关系模式可以形式化地表示为：<em>R<strong>（</strong>U<strong>，</strong>D，</em>DOM<em>，<strong>F</strong>）</em></p>
+<p>![image-20230306203557200](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306203557200.png)</p>
+<p>![image-20230306203649581](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306203649581.png)</p>
+<p><strong>关系数据库：</strong>在一个给定的应用领域中，所有关系的集合构成一个关系数据库</p>
+<p>![image-20230306204004708](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306204004708.png)</p>
+<h1 id="关系的完整性（难度，并且要结合前几个lecture）"><a href="#关系的完整性（难度，并且要结合前几个lecture）" class="headerlink" title="关系的完整性（难度，并且要结合前几个lecture）"></a>关系的完整性（难度，并且要结合前几个lecture）</h1><p><strong>关系的三类完整性约束：实体完整性、参照完整性、用户定义的完整性</strong></p>
+<p>![image-20230306204210859](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306204210859.png)</p>
+<h2 id="实体完整性（Entity-Integrity）"><a href="#实体完整性（Entity-Integrity）" class="headerlink" title="实体完整性（Entity Integrity）"></a>实体完整性（Entity Integrity）</h2><p><strong>定义：</strong>若属性<em>*<em>A</em>是基本关系*R</em>的主属性<strong>，则属性</strong><em>A</em>不能取空值**，空值就是“不知道”或“不存在”或“无意义”的值</p>
+<p><strong>例子：</strong></p>
+<p>关系（模式）：选修（<strong>学号</strong>，<strong>课程号</strong>，成绩），学号和课程号为主码，这两个属性都不能取空值</p>
+<p><strong>基本关系（基本表或者基表）：</strong>实际存在的表，是实际存储数据的逻辑表示</p>
+<p><strong>说明：</strong></p>
+<ol>
+<li>实体完整性规则是针对基本关系而言的。一个基本表通常对应现实世界的一个实体集（参照上述定义）。</li>
+<li>现实世界中的实体是可区分的，即它们具有某种唯一性标识。</li>
+<li>关系模型中以主码作为唯一性标识。</li>
+<li>主码中的属性即主属性不能取空值。（主属性取空值，就说明存在某个不可标识的实体，即存在不可区分的实体，这与第2点相矛盾，因此这个规则称为实体完整性）</li>
+</ol>
+<h2 id="关系间的引用"><a href="#关系间的引用" class="headerlink" title="关系间的引用"></a>关系间的引用</h2><p>在关系模型中实体及实体间的联系都是用关系来描述的，自然存在着关系与关系间的引用。理解见下。</p>
+<p><strong>实体之间的联系通常指不同实体集之间的联系，有m对n（m&#x3D;1,k;n&#x3D;1,j），实体内部的联系通常指组成实体的各个属性之间的联系</strong></p>
+<p>关系（模式）是型，关系是值</p>
+<p>![image-20230306205653594](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306205653594.png)</p>
+<p>eg：</p>
+<p>![image-20230306205845281](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306205845281.png)</p>
+<p>![image-20230306205924450](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306205924450.png)</p>
+<p>![image-20230306205930431](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306205930431.png)</p>
+<h3 id="外码"><a href="#外码" class="headerlink" title="外码"></a>外码</h3><p>设<em>*<em>F</em>是基本关系*R</em>的一个或一组属性<strong>，但</strong>不是关系<em>R</em>的(主)码(F可以是主码的一部分，但不是完全主码)<strong>。如果</strong><em>F</em>与基本关系<em>S</em>的主码$k_S$<strong>相对应，则称</strong><em>F</em>是<em>R</em>的外码**（Foreign Key）。</p>
+<p>如：例2 学号是选修关系的一个属性，但不是选修关系的主码，学号与基本关系学生关系的主码学号相对应，那么学号是选修关系的一个外码。</p>
+<p>例3 班长是学生关系的一个属性，但不是该关系的主码，但是学生实体及其内部的领导关系（由于属性相同其实也是学生关系？）的主码，那么班长是学生关系的一个外码，引用了学生实体及其内部的领导关系（学生关系）的一个外码。</p>
+<p>基本关系<em>R</em>称为参照关系（Referencing Relation）</p>
+<p>基本关系<em>S</em>称为被参照关系（Referenced Relation）或目标关系（Target Relation）</p>
+<p>关系<em>R</em>和<em>S</em>不一定是不同的关系</p>
+<p>目标关系<em>S</em>的主码$K_s$和参照关系的外码<em>F</em>必须定义在同一个（或一组）域上</p>
+<p>外码并不一定要与相应的主码同名（学生关系）</p>
+<p>当外码与相应的主码属于不同关系时，往往取相同的名字，以便于识别</p>
+<h2 id="参照完整性规则"><a href="#参照完整性规则" class="headerlink" title="参照完整性规则"></a>参照完整性规则</h2><p><strong>定义：</strong>若属性（或属性组）<em>F</em>是基本关系<em>R</em>的外码,它与基本关系<em>S</em>的主码$Ks$相对应（基本关系<em>R</em>和<em>S</em>不一定是不同的关系），则对于<em>R</em>中每个元组在<em>F</em>上的值必须为：</p>
+<p>或者取空值（<em>F</em>的每个属性值均为空值）</p>
+<p>或者等于<em>S</em>中某个元组的主码值</p>
+<p>如果取了两者之外，就意味着F有超出了S作为主码现有的域，主码的意义是完全表示每个实体，那么有一个这样的F属性的实体是不存在的，那么这个取就是无意义的。</p>
+<p>eg：</p>
+<p>![image-20230306213338420](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306213338420.png)</p>
+<h2 id="用户定义的完整性"><a href="#用户定义的完整性" class="headerlink" title="用户定义的完整性"></a>用户定义的完整性</h2><p><strong>定义：</strong>针对某一具体关系数据库的约束条件，反映某一具体应用所涉及的数据必须满足的语义要求</p>
+<p>关系模型应提供定义和检验这类完整性的机制，以便用统一的系统的方法处理它们，而不需由应用程序承担这一功能</p>
+<p>eg:</p>
+<p>![image-20230306213513249](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306213513249.png)</p>
+]]></content>
+      <tags>
+        <tag>数据管理基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关系模型-Lecture1</title>
+    <url>/2023/02/23/%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B-Lecture1/</url>
+    <content><![CDATA[<p><strong>关系模型——逻辑模型的一种</strong></p>
+<h1 id="逻辑模型"><a href="#逻辑模型" class="headerlink" title="逻辑模型"></a>逻辑模型</h1><p>将信息世界转换为机器世界</p>
+<p>基本问题是如何在机器世界中表达”低层“数据结构和”高层“数据结构？</p>
+<p>![image-20230306153835342](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306153835342.png)</p>
+<p>常用的数据模型</p>
+<p>![image-20230306153851065](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306153851065.png)<strong>关系模型</strong></p>
+<h1 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h1><p>l在用户观点下，关系模型中数据的逻辑结构是一张二维表，它由行和列组成。<strong>属性、元组</strong></p>
+<p>![image-20230306154041682](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154041682.png)</p>
+<h2 id="关系模型的数据结构"><a href="#关系模型的数据结构" class="headerlink" title="关系模型的数据结构"></a>关系模型的数据结构</h2><p>![image-20230306154120203](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154120203.png)</p>
+<p>关系必须是规范化的，满足一定的规范条件</p>
+<p><strong>最基本的规范条件：关系的每一个分量必须是一个不可分的数据项, 不允许表中还有表</strong> </p>
+<p>![image-20230306154341923](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154341923.png)</p>
+<h2 id="关系模型的操作与完整性约束"><a href="#关系模型的操作与完整性约束" class="headerlink" title="关系模型的操作与完整性约束"></a>关系模型的操作与完整性约束</h2><p>![image-20230306154507843](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154507843.png)</p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><p>![image-20230306154542972](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154542972.png)</p>
+<h2 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h2><p>![image-20230306154705030](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154705030.png)</p>
+<h1 id="数据库系统的结构"><a href="#数据库系统的结构" class="headerlink" title="数据库系统的结构"></a>数据库系统的结构</h1><p>通常采用三级模式</p>
+<p><strong>模式（Schema）：</strong></p>
+<p>![image-20230306193433024](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193433024.png)</p>
+<p><strong>实例（Instance）：</strong></p>
+<p>![image-20230306193512882](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193512882.png)</p>
+<p>![image-20230306193554967](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193554967.png)</p>
+<p><strong>三级模式：</strong></p>
+<p>![image-20230306193611965](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193611965.png)</p>
+<h2 id="模式（Schema）"><a href="#模式（Schema）" class="headerlink" title="模式（Schema）"></a>模式（Schema）</h2><p>![image-20230306193658719](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193658719.png)</p>
+<h3 id="外模式"><a href="#外模式" class="headerlink" title="外模式"></a>外模式</h3><p>![image-20230306193757229](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193757229.png)</p>
+<p>![image-20230306193826120](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193826120.png)</p>
+<h3 id="内模式"><a href="#内模式" class="headerlink" title="内模式"></a>内模式</h3><p>![image-20230306193847916](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193847916.png)</p>
+<h2 id="数据库的二级映像与数据独立性"><a href="#数据库的二级映像与数据独立性" class="headerlink" title="数据库的二级映像与数据独立性"></a>数据库的二级映像与数据独立性</h2><p>![image-20230306193950221](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193950221.png)</p>
+<h3 id="外模式-x2F-模式映像"><a href="#外模式-x2F-模式映像" class="headerlink" title="外模式&#x2F;模式映像"></a>外模式&#x2F;模式映像</h3><p>![image-20230306194006197](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194006197.png)</p>
+<h3 id="模式-x2F-内模式映像"><a href="#模式-x2F-内模式映像" class="headerlink" title="模式&#x2F;内模式映像"></a>模式&#x2F;内模式映像</h3><p>![image-20230306194113408](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194113408.png)</p>
+<h3 id="数据库的二级映像"><a href="#数据库的二级映像" class="headerlink" title="数据库的二级映像"></a>数据库的二级映像</h3><p>数据库模式</p>
+<p>![image-20230306194224812](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194224812.png)</p>
+<p>数据库内模式</p>
+<p>![image-20230306194232267](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194232267.png)</p>
+<p>数据库外模式</p>
+<p>![image-20230306194239361](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194239361.png)</p>
+<p>![image-20230306194244894](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194244894.png)</p>
+<p>二级映像</p>
+<p>![image-20230306194353698](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194353698.png)</p>
+<h1 id="数据库系统的组成"><a href="#数据库系统的组成" class="headerlink" title="数据库系统的组成"></a>数据库系统的组成</h1><h2 id="软硬件平台"><a href="#软硬件平台" class="headerlink" title="软硬件平台"></a>软硬件平台</h2><p>![image-20230306194710031](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194710031.png)</p>
+<h2 id="人员"><a href="#人员" class="headerlink" title="人员"></a>人员</h2><p>![image-20230306194715962](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194715962.png)</p>
+]]></content>
+      <tags>
+        <tag>数据管理基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关系型数据库-Lecture0</title>
+    <url>/2023/02/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%BF%B0-Lecture0/</url>
+    <content><![CDATA[<p><strong>数据库概述</strong></p>
+<h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><h2 id="DBMS-DataBase-Management-System数据库管理系统"><a href="#DBMS-DataBase-Management-System数据库管理系统" class="headerlink" title="DBMS:DataBase Management System数据库管理系统"></a>DBMS:DataBase Management System数据库管理系统</h2><p>DBSM是DB的管理软件，是一种软件产品，将一个企业的数据以记录的形式在计算机中保存起来。</p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>为同一个目的而保存起来的所有数据的集合称为数据库</p>
+<h1 id="数据库用户"><a href="#数据库用户" class="headerlink" title="数据库用户"></a>数据库用户</h1><p>最终用户：</p>
+<ul>
+<li>临时用户(用SQL语句访问DBMS)</li>
+<li>缺乏经验的用户（用菜单访问DBMS的用户）</li>
+</ul>
+<p>应用程序员（编写菜单程序的程序员）</p>
+<p>数据库管理员（DBA）：数据库系统中，负责数据库设计、建立、日常管理和运行维护的人员</p>
+<h1 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h1><h2 id="三种模型"><a href="#三种模型" class="headerlink" title="三种模型"></a>三种模型</h2><p>概念模型、逻辑模型、物理模型</p>
+<p>![image-20230306151920720](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306151920720.png)</p>
+<h2 id="两步抽象"><a href="#两步抽象" class="headerlink" title="两步抽象"></a>两步抽象</h2><p>![image-20230306152040619](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152040619.png)</p>
+<h2 id="数据模型的组成要素"><a href="#数据模型的组成要素" class="headerlink" title="数据模型的组成要素"></a>数据模型的组成要素</h2><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>描述数据库的组成对象与对象之间的联系。</p>
+<p>![image-20230306152220008](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152220008.png)</p>
+<h3 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h3><p>![image-20230306152239103](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152239103.png)</p>
+<h3 id="数据的完整性约束条件"><a href="#数据的完整性约束条件" class="headerlink" title="数据的完整性约束条件"></a>数据的完整性约束条件</h3><p>![image-20230306152309238](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152309238.png)</p>
+<h2 id="概念模型"><a href="#概念模型" class="headerlink" title="概念模型"></a>概念模型</h2><p>![image-20230306152518224](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152518224.png)</p>
+<h3 id="信息世界的基本概念"><a href="#信息世界的基本概念" class="headerlink" title="信息世界的基本概念"></a>信息世界的基本概念</h3><p><strong>实体（Entity）</strong></p>
+<p>![image-20230306152629678](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152629678.png)</p>
+<p><strong>属性（Attribute）</strong></p>
+<p>![image-20230306152702487](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152702487.png)</p>
+<p><strong>码（Key）</strong></p>
+<p>![image-20230306152731322](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152731322.png)</p>
+<p><strong>实体型（Entity Type）</strong></p>
+<p>![image-20230306152812217](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152812217.png)</p>
+<p><strong>实体集（Entity Set）</strong></p>
+<p>![image-20230306152901809](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152901809.png)</p>
+<p><strong>联系（Relationship）</strong> </p>
+<p>![image-20230306152925313](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306152925313.png)</p>
+<h3 id="实体的联系"><a href="#实体的联系" class="headerlink" title="实体的联系"></a>实体的联系</h3><p>![image-20230306153306591](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306153306591.png)</p>
+<p>![image-20230306153312049](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306153312049.png)</p>
+<p>![image-20230306153326045](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306153326045.png)</p>
+<p>![image-20230306153338959](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306153338959.png)</p>
+]]></content>
+      <tags>
+        <tag>数据管理基础</tag>
+      </tags>
   </entry>
   <entry>
     <title>软件工程与计算II-Lecture0</title>

@@ -9,18 +9,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/02/27/软件工程与计算ii-lecture0/"/>
+    <link rel="canonical" href="http://example.com/2023/02/23/关系模型-lecture1/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="软件工程与计算II-Lecture0">
+    <meta property="og:title" content="关系模型-Lecture1">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="http://example.com2023/02/27/软件工程与计算II-Lecture0/">
+    <meta property="og:url" content="http://example.com2023/02/23/关系模型-Lecture1/">
     <meta property="og:image" content="/images/head.jpg">
     <meta property="og:site_name" content="Arnold&#39;s Blog">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="软件工程与计算II-Lecture0">
+    <meta name="twitter:title" content="关系模型-Lecture1">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/head.jpg">
     <!--- Icon Part-->
@@ -31,7 +31,7 @@
     
     <title>
         
-            软件工程与计算II-Lecture0 -
+            关系模型-Lecture1 -
         
         Arnold&#39;s Blog
     </title>
@@ -303,7 +303,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">软件工程与计算II-Lecture0</h1>
+                    <h1 class="article-title-regular">关系模型-Lecture1</h1>
                 </div>
             
                 
@@ -325,31 +325,31 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-02-27 15:10</span>
-        <span class="mobile">2023-02-27 15:10</span>
+        <span class="pc">2023-02-23 11:35:43</span>
+        <span class="mobile">2023-02-23 11:35</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-02-27 23:18:39</span>
-            <span class="mobile">2023-02-27 23:18</span>
+            <span class="pc">2023-03-06 21:42</span>
+            <span class="mobile">2023-03-06 21:42</span>
             <span class="hover-info">Updated</span>
         </span>
     
 
     
-        <span class="article-categories article-meta-item">
-            <i class="fa-regular fa-folders"></i>&nbsp;
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
             <ul>
                 
                     <li>
-                        <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97II/">软件工程与计算II</a>&nbsp;
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/">数据管理基础</a>&nbsp;
                     </li>
                 
             </ul>
         </span>
-    
     
 
     
@@ -368,195 +368,59 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="Lecture0"><a href="#Lecture0" class="headerlink" title="Lecture0"></a>Lecture0</h1><h2 id="软件工程基础"><a href="#软件工程基础" class="headerlink" title="软件工程基础"></a>软件工程基础</h2><p>软件、软件工程、知识域、如何学</p>
-<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><h4 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h4><p>信息的记录、交流、存储</p>
-<p>信息-&gt;计算-&gt;数字计算机-&gt;软件</p>
-<h4 id="数字计算历史"><a href="#数字计算历史" class="headerlink" title="数字计算历史"></a>数字计算历史</h4><h3 id="Foundation-of-Digital-Computing-30s"><a href="#Foundation-of-Digital-Computing-30s" class="headerlink" title="Foundation of Digital Computing - 30s"></a>Foundation of Digital Computing - 30s</h3><ol>
-<li>硬件:微分计算器、继电器式计算机、ABC原型计算、Harvard Mark 1 IBM实验室</li>
-<li>Theory 理论<ol>
-<li>《论可计算数及其在判定问题上的应⽤》-Alan Turing</li>
-<li>电⼦继电器可以实现布尔符号逻辑 Claude Elwood Shannon</li>
-</ol>
-</li>
-</ol>
-<h3 id="Digital-Computers-40s"><a href="#Digital-Computers-40s" class="headerlink" title="Digital Computers - 40s"></a>Digital Computers - 40s</h3><ol>
-<li>ENIAC:第一台计算机</li>
-<li>Programming the ENIAC</li>
-<li>Programming chart</li>
-<li>编程的步骤<ol>
-<li>将问题映射到机器上的任务很复杂，通常需要几个星期。</li>
-<li>程序在纸上完成后，通过操纵开关和电缆将程序”导入”ENIAC的过程需要额外的几天时间。</li>
-<li>随后是一段时间的验证和调试，借助于机器的”单步”能力。</li>
-</ol>
-</li>
-<li>EDVAC：(了解)<ol>
-<li>EDVAC(Electronic Discrete Variable Automatic Computer)是最早的电子计算机之一。与它的前身ENIAC不同，ENIAC是二进制的，而不是十进制的，它是一台存储程序计算机。</li>
-<li>埃克特、莫奇利和其他ENIAC设计师与约翰·冯·诺依曼一起担任顾问职务；冯·诺依曼在1945年EDVAC报告初稿中总结和讨论了逻辑设计发展。埃克特、莫奇利和其他ENIAC设计师与约翰·冯·诺依曼一起担任顾问职务；冯·诺依曼在1945年EDVAC报告初稿中总结和讨论了逻辑设计发展。</li>
-</ol>
-</li>
-</ol>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Software-Engineering-and-Computing-II/img/cpt1/1.png"
-                      alt="img"
-                ></p>
-<h3 id="Software-is-one-part-of-Hardware-50s"><a href="#Software-is-one-part-of-Hardware-50s" class="headerlink" title="Software is one part of Hardware -50s"></a>Software is one part of Hardware -50s</h3><ol>
-<li>商业大型机：Ferranti Mark I、UNIVAC I、LEO I、IBM 701、IBM 650</li>
-<li>编程语言，1955 FORTRAN，1958 LISP，1959 COBAL</li>
-<li>命名：John W. Tukey在1958年发表在《美国数学月刊》上的一篇文章中，成为第一个定义运行电子计算器的程序的人。</li>
-</ol>
-<h3 id="Software-is-not-Hardware-60s"><a href="#Software-is-not-Hardware-60s" class="headerlink" title="Software is not Hardware - 60s"></a>Software is not Hardware - 60s</h3><ol>
-<li>变革、ASCII美国信息交换标准码出现、ATM、IBM信息管理系统IMS应⽤于阿波罗航天器、软件咨询业务、IBM S&#x2F;360、信⽤卡、DEC PDP-1⼩型机</li>
-<li>软件的特性<ol>
-<li>软件与现实世界关系更加密切，对需求的规格化更加困难</li>
-<li>软件⽐硬件容易修改的多，并且不需要昂贵的⽣产线复制产品</li>
-<li>软件没有损耗</li>
-<li>软件不可见</li>
-</ol>
-</li>
-</ol>
-<h3 id="Program-x3D-Algorithm-Data-Structure-70s-80s"><a href="#Program-x3D-Algorithm-Data-Structure-70s-80s" class="headerlink" title="Program &#x3D; Algorithm + Data Structure - 70s ~ 80s"></a>Program &#x3D; Algorithm + Data Structure - 70s ~ 80s</h3><ol>
-<li>Algorithms + Data Structures &#x3D; Programs是Niklaus Wirth在1976年写的一本书，涵盖了计算机编程的一些基本主题，特别是算法和数据结构之间的内在联系。</li>
-<li>For example, if one has a sorted list one will use a search algorithm optimal for sorted lists. 例如，如果一个人有一个已排序的列表，他将使用一个对已排序列表最合适的搜索算法。</li>
-</ol>
-<h3 id="Software-Development-is-much-more-complicated-than-Programming-90s-now"><a href="#Software-Development-is-much-more-complicated-than-Programming-90s-now" class="headerlink" title="Software Development is much more complicated than Programming - 90s ~ now"></a>Software Development is much more complicated than Programming - 90s ~ now</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Software-Engineering-and-Computing-II/img/cpt1/2.png"
-                      alt="img"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Software-Engineering-and-Computing-II/img/cpt1/3.png"
-                      alt="img"
-                ></p>
-<ol>
-<li>软件类别<ul>
-<li>系统软件:操作系统、数据库、数据仓库、嵌⼊式设备、安全</li>
-<li>编程软件IDE、测试、持续集成、建模、度量</li>
-<li>应用软件:商业、政府、休闲、医疗、教育、国防、 个⼈、专业、科学</li>
-</ul>
-</li>
-<li>应用软件基于现实又高于现实<ul>
-<li>应用软件被开发的目的和意图来源于现实世界的问题。</li>
-<li>应用软件必须基于现实才能解决问题。</li>
-<li>软件最终要被用于现实并改进现实。</li>
-</ul>
-</li>
-</ol>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Software-Engineering-and-Computing-II/img/cpt1/4.png"
-                      alt="img"
-                ></p>
-<h4 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h4><ol>
-<li>软件独立于硬件</li>
-<li>软件是工具</li>
-<li>软件 &#x3D; 程序 + 文档 + 数据 + 知识</li>
-<li>软件的发展比编码更加复杂</li>
-<li>应用软件源于现实，但是高于现实(课本P4)</li>
-</ol>
-<h3 id="工程"><a href="#工程" class="headerlink" title="工程"></a>工程</h3><ol>
-<li><p>美国工程师专业发展委员会(ECPD，ABET的前身)将”工程”定义为：创造性地应用科学原理，设计或开发结构、机器、仪器或制造工艺，或单独或组合使用它们的工程；或在充分了解它们的设计的情况下建造或操作它们；或在特定操作条件下预测它们的行为；就预期功能、运行的经济性或生命财产安全而言</p>
-</li>
-<li><p>CCSE - About Engineer 关于工程师</p>
-<ol>
-<li>工程师通过⼀系列的<strong>讨论决策</strong>，仔细评估项⽬的可选活动，并在每个决策点选择⼀种在当前环境中适合工当前任务的⽅法进⾏工作。可以通过对成本和收益进⾏折衷分析调整相应策略。</li>
-<li>工程师需要对某些对象进⾏度量，有时需要定量的工作；他们要校准和确认度量⽅法，并根据经验和实验数据进⾏估算。</li>
-<li>软件工程师强调<strong>项目设计过程的纪律性</strong>，这是团队⾼效工作的条件。</li>
-<li>工程师可胜任研究、开发、设计、⽣产、测试、构造、操作、管理，以及销售、咨询和培训等<strong>多种角色</strong>。</li>
-<li>工程师们需要在某些过程中使⽤工具，选择和使用合适的工具是工程的关键要素。</li>
-<li>工程师们通过专业协会发展和确认原理、标准和最佳实践⽅法，并提⾼个⼈能⼒。</li>
-<li>工程师们能够重用设计和设计制品。</li>
-</ol>
-</li>
-<li><p>工程师的决策往往进行折中，选择最优解。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Software-Engineering-and-Computing-II/img/cpt1/5.png"
-                      alt="img"
-                ></p>
-<h4 id="工程要素"><a href="#工程要素" class="headerlink" title="工程要素"></a>工程要素</h4><ol>
-<li>问题:动力</li>
-<li>科学知识:工具</li>
-<li>解决方法&#x2F;机器:物体</li>
-<li>成本效益&#x2F;条件</li>
-</ol>
-</li>
-</ol>
-<h3 id="软件工程-1"><a href="#软件工程-1" class="headerlink" title="软件工程"></a>软件工程</h3><h4 id="什么是软件工程？-重要"><a href="#什么是软件工程？-重要" class="headerlink" title="什么是软件工程？(重要)"></a>什么是软件工程？(重要)</h4><ol>
-<li>应用系统的、规范的、可量化的方法来开发、运行和维护软件，即将工程应用到软件。</li>
-<li>对1)中各种方法的研究。</li>
-</ol>
-<h4 id="软件的工程的特点"><a href="#软件的工程的特点" class="headerlink" title="软件的工程的特点"></a>软件的工程的特点</h4><ol>
-<li>具有解决实际问题的动机：工程学解决实际问题，⽽这些问题来源于工程领域之外的⼈：消费者。</li>
-<li>应⽤科学知识指导工程活动：工程学不依赖于个⼈的技能，⽽是强调以科学知识为指导，按照特定⽅法与技术，进⾏规律性的设计、分析等活动，实现工程活动的可学习性和可重复性。</li>
-<li>以成本效益⽐有效为基本条件：工程学不单单只是解决问题，它要有效利⽤所有资源，⾄少成本要低于效益，即成本效益⽐有效。</li>
-<li>构建机器或事物：工程学强调构建实物⼯具，例如机器、事物等，并利⽤实物⼯具来解决问题。</li>
-<li><strong>以服务人类为最终目的</strong>：工程学考虑的不是单个客户的需要，⽽是要运⽤技术和经验实现全社会的进步。</li>
-</ol>
-<h4 id="软件工程师面临的问题"><a href="#软件工程师面临的问题" class="headerlink" title="软件工程师面临的问题"></a>软件工程师面临的问题</h4><ol>
-<li>现实世界是复杂的：如果现实世界的状况与我们的期望不符，这就产生了问题。</li>
-<li>很广阔的范围：所有人类所涉及的领域、在其他工程领域，问题是有限的</li>
-<li>大多数是不明确的，需要我们去发现：在其他工程领域，问题是确定和明确的</li>
-<li>工程思维：客观的，知道你想要什么</li>
-</ol>
-<h4 id="科学知识"><a href="#科学知识" class="headerlink" title="科学知识"></a>科学知识</h4><ol>
-<li>以计算科学为科学基础，基于科学和逻辑作为标准工具</li>
-<li>很多领域都是被对称的创造出来的，依据方法&#x2F;方法论&#x2F;技术，使用语言、工具，进行研究</li>
-</ol>
-<h4 id="工程-x3D-科学-原则-艺术"><a href="#工程-x3D-科学-原则-艺术" class="headerlink" title="工程 &#x3D; 科学 + 原则 + 艺术"></a>工程 &#x3D; 科学 + 原则 + 艺术</h4><ol>
-<li>科学:计算科学知识是软件工程的基础</li>
-<li>原则:实践知识也应该被广泛的分享</li>
-<li>艺术：创造力:分析，设计</li>
-</ol>
-<h4 id="问题-x2F-机器和产品"><a href="#问题-x2F-机器和产品" class="headerlink" title="问题&#x2F;机器和产品"></a>问题&#x2F;机器和产品</h4><ol>
-<li>虚拟机 &#x3D; 通用机 + 特定的解决方案</li>
-<li>解决方案可以在编程语言的帮助下映射到通用计算机上</li>
-<li>并不像其他工程一样，不同问题有不同机器</li>
-<li>解决方案的发展是软件工程首要的任务</li>
-<li>将解决方案映射到通用机上是软件工程的次要任务</li>
-</ol>
-<h4 id="成本效益"><a href="#成本效益" class="headerlink" title="成本效益"></a>成本效益</h4><ol>
-<li>可行性研究<ul>
-<li>利益取决于用户</li>
-<li>成本取决于软件工程师</li>
-</ul>
-</li>
-<li>到达目的地的方法总是很多的，软件工程师应该选择最具成本效益的方法(而不是最先进的方法)</li>
-<li>当成本和效益的关系不再重要的时候，软件工程师将会消失<ul>
-<li>成本低：小规模编程</li>
-<li>收益不明确：勘探研究</li>
-<li>不计成本：计算科学研究</li>
-<li>工程思想：成本和收益相平衡</li>
-<li>控制和管理</li>
-</ul>
-</li>
-</ol>
-<h4 id="Understanding-of-Software-Engineering-软件工程的理解"><a href="#Understanding-of-Software-Engineering-软件工程的理解" class="headerlink" title="Understanding of Software Engineering 软件工程的理解"></a>Understanding of Software Engineering 软件工程的理解</h4><ol>
-<li>软件工程是⼀种工程活动</li>
-<li>软件工程的动机是解决实际问题</li>
-<li>软件工程是科学性、实践性和⼯艺性并重的</li>
-<li>软件工程追求⾜够好，不是最好</li>
-<li>软件工程真正的产品是基于虚拟计算机的软件⽅案</li>
-<li>软件工程的最终⽬的是要<strong>促进整个社会的进步</strong></li>
-</ol>
-<h3 id="知识域"><a href="#知识域" class="headerlink" title="知识域"></a>知识域</h3>
+                <p><strong>关系模型——逻辑模型的一种</strong></p>
+<h1 id="逻辑模型"><a href="#逻辑模型" class="headerlink" title="逻辑模型"></a>逻辑模型</h1><p>将信息世界转换为机器世界</p>
+<p>基本问题是如何在机器世界中表达”低层“数据结构和”高层“数据结构？</p>
+<p>![image-20230306153835342](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306153835342.png)</p>
+<p>常用的数据模型</p>
+<p>![image-20230306153851065](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306153851065.png)<strong>关系模型</strong></p>
+<h1 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h1><p>l在用户观点下，关系模型中数据的逻辑结构是一张二维表，它由行和列组成。<strong>属性、元组</strong></p>
+<p>![image-20230306154041682](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154041682.png)</p>
+<h2 id="关系模型的数据结构"><a href="#关系模型的数据结构" class="headerlink" title="关系模型的数据结构"></a>关系模型的数据结构</h2><p>![image-20230306154120203](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154120203.png)</p>
+<p>关系必须是规范化的，满足一定的规范条件</p>
+<p><strong>最基本的规范条件：关系的每一个分量必须是一个不可分的数据项, 不允许表中还有表</strong> </p>
+<p>![image-20230306154341923](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154341923.png)</p>
+<h2 id="关系模型的操作与完整性约束"><a href="#关系模型的操作与完整性约束" class="headerlink" title="关系模型的操作与完整性约束"></a>关系模型的操作与完整性约束</h2><p>![image-20230306154507843](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154507843.png)</p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><p>![image-20230306154542972](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154542972.png)</p>
+<h2 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h2><p>![image-20230306154705030](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306154705030.png)</p>
+<h1 id="数据库系统的结构"><a href="#数据库系统的结构" class="headerlink" title="数据库系统的结构"></a>数据库系统的结构</h1><p>通常采用三级模式</p>
+<p><strong>模式（Schema）：</strong></p>
+<p>![image-20230306193433024](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193433024.png)</p>
+<p><strong>实例（Instance）：</strong></p>
+<p>![image-20230306193512882](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193512882.png)</p>
+<p>![image-20230306193554967](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193554967.png)</p>
+<p><strong>三级模式：</strong></p>
+<p>![image-20230306193611965](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193611965.png)</p>
+<h2 id="模式（Schema）"><a href="#模式（Schema）" class="headerlink" title="模式（Schema）"></a>模式（Schema）</h2><p>![image-20230306193658719](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193658719.png)</p>
+<h3 id="外模式"><a href="#外模式" class="headerlink" title="外模式"></a>外模式</h3><p>![image-20230306193757229](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193757229.png)</p>
+<p>![image-20230306193826120](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193826120.png)</p>
+<h3 id="内模式"><a href="#内模式" class="headerlink" title="内模式"></a>内模式</h3><p>![image-20230306193847916](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193847916.png)</p>
+<h2 id="数据库的二级映像与数据独立性"><a href="#数据库的二级映像与数据独立性" class="headerlink" title="数据库的二级映像与数据独立性"></a>数据库的二级映像与数据独立性</h2><p>![image-20230306193950221](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306193950221.png)</p>
+<h3 id="外模式-x2F-模式映像"><a href="#外模式-x2F-模式映像" class="headerlink" title="外模式&#x2F;模式映像"></a>外模式&#x2F;模式映像</h3><p>![image-20230306194006197](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194006197.png)</p>
+<h3 id="模式-x2F-内模式映像"><a href="#模式-x2F-内模式映像" class="headerlink" title="模式&#x2F;内模式映像"></a>模式&#x2F;内模式映像</h3><p>![image-20230306194113408](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194113408.png)</p>
+<h3 id="数据库的二级映像"><a href="#数据库的二级映像" class="headerlink" title="数据库的二级映像"></a>数据库的二级映像</h3><p>数据库模式</p>
+<p>![image-20230306194224812](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194224812.png)</p>
+<p>数据库内模式</p>
+<p>![image-20230306194232267](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194232267.png)</p>
+<p>数据库外模式</p>
+<p>![image-20230306194239361](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194239361.png)</p>
+<p>![image-20230306194244894](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194244894.png)</p>
+<p>二级映像</p>
+<p>![image-20230306194353698](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194353698.png)</p>
+<h1 id="数据库系统的组成"><a href="#数据库系统的组成" class="headerlink" title="数据库系统的组成"></a>数据库系统的组成</h1><h2 id="软硬件平台"><a href="#软硬件平台" class="headerlink" title="软硬件平台"></a>软硬件平台</h2><p>![image-20230306194710031](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194710031.png)</p>
+<h2 id="人员"><a href="#人员" class="headerlink" title="人员"></a>人员</h2><p>![image-20230306194715962](C:\Users\Zhang Songqin\AppData\Roaming\Typora\typora-user-images\image-20230306194715962.png)</p>
+
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：软件工程与计算II-Lecture0</li>
+        <li>Post title：关系模型-Lecture1</li>
         <li>Post author：Arnold</li>
-        <li>Create time：2023-02-27 15:10:00</li>
+        <li>Create time：2023-02-23 11:35:43</li>
         <li>
-            Post link：https://mumuuumum.github.io/2023/02/27/软件工程与计算II-Lecture0/
+            Post link：https://mumuuumum.github.io/2023/02/23/关系模型-Lecture1/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -568,20 +432,43 @@
             
 
             
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/">#数据管理基础</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
             
 
             
                 <div class="article-nav">
                     
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/02/23/%E5%85%B3%E7%B3%BB%E3%80%81%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93-Lecture2/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">关系、关系模式和关系数据库-Lecture2</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/02/23/My-New-Post/"
+                            href="/2023/02/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%BF%B0-Lecture0/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">My New Post</span>
+                                    <span class="post-nav-title-item">关系型数据库-Lecture0</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -619,8 +506,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">软件工程与计算II-Lecture0</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture0"><span class="nav-text">Lecture0</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%9F%BA%E7%A1%80"><span class="nav-text">软件工程基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6"><span class="nav-text">软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF"><span class="nav-text">信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E8%AE%A1%E7%AE%97%E5%8E%86%E5%8F%B2"><span class="nav-text">数字计算历史</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Foundation-of-Digital-Computing-30s"><span class="nav-text">Foundation of Digital Computing - 30s</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Digital-Computers-40s"><span class="nav-text">Digital Computers - 40s</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-is-one-part-of-Hardware-50s"><span class="nav-text">Software is one part of Hardware -50s</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-is-not-Hardware-60s"><span class="nav-text">Software is not Hardware - 60s</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Program-x3D-Algorithm-Data-Structure-70s-80s"><span class="nav-text">Program &#x3D; Algorithm + Data Structure - 70s ~ 80s</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Development-is-much-more-complicated-than-Programming-90s-now"><span class="nav-text">Software Development is much more complicated than Programming - 90s ~ now</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B"><span class="nav-text">软件工程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B"><span class="nav-text">工程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B%E8%A6%81%E7%B4%A0"><span class="nav-text">工程要素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-1"><span class="nav-text">软件工程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%EF%BC%9F-%E9%87%8D%E8%A6%81"><span class="nav-text">什么是软件工程？(重要)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%B7%A5%E7%A8%8B%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">软件的工程的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E9%9D%A2%E4%B8%B4%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-text">软件工程师面临的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A7%91%E5%AD%A6%E7%9F%A5%E8%AF%86"><span class="nav-text">科学知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B-x3D-%E7%A7%91%E5%AD%A6-%E5%8E%9F%E5%88%99-%E8%89%BA%E6%9C%AF"><span class="nav-text">工程 &#x3D; 科学 + 原则 + 艺术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-x2F-%E6%9C%BA%E5%99%A8%E5%92%8C%E4%BA%A7%E5%93%81"><span class="nav-text">问题&#x2F;机器和产品</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E6%9C%AC%E6%95%88%E7%9B%8A"><span class="nav-text">成本效益</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Understanding-of-Software-Engineering-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text">Understanding of Software Engineering 软件工程的理解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E5%9F%9F"><span class="nav-text">知识域</span></a></li></ol></li></ol></li></ol>
+        <div class="page-title">关系模型-Lecture1</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B"><span class="nav-text">逻辑模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B"><span class="nav-text">关系模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-text">关系模型的数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%8C%E6%95%B4%E6%80%A7%E7%BA%A6%E6%9D%9F"><span class="nav-text">关系模型的操作与完整性约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NoSQL"><span class="nav-text">NoSQL</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-text">数据库系统的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F%EF%BC%88Schema%EF%BC%89"><span class="nav-text">模式（Schema）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E6%A8%A1%E5%BC%8F"><span class="nav-text">外模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E6%A8%A1%E5%BC%8F"><span class="nav-text">内模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8C%E7%BA%A7%E6%98%A0%E5%83%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="nav-text">数据库的二级映像与数据独立性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E6%A8%A1%E5%BC%8F-x2F-%E6%A8%A1%E5%BC%8F%E6%98%A0%E5%83%8F"><span class="nav-text">外模式&#x2F;模式映像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F-x2F-%E5%86%85%E6%A8%A1%E5%BC%8F%E6%98%A0%E5%83%8F"><span class="nav-text">模式&#x2F;内模式映像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8C%E7%BA%A7%E6%98%A0%E5%83%8F"><span class="nav-text">数据库的二级映像</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-text">数据库系统的组成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E7%A1%AC%E4%BB%B6%E5%B9%B3%E5%8F%B0"><span class="nav-text">软硬件平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E5%91%98"><span class="nav-text">人员</span></a></li></ol></li></ol>
 
     </div>
 </div>
